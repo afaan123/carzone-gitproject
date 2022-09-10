@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %} | Home {% endblock %}
 {% block content %}
-{% load humanize %}
 {% load static %}
 
 <!-- Banner start -->
@@ -121,7 +121,7 @@
                             <a href="{% url 'car_detail' car.id %}" class="car-img">
                                 <div class="tag-2">Featured</div>
                                 <div class="price-box">
-                                    <span>{{ car.price | intcomma }}</span>
+                                    <span>{{ car.price  }}</span>
                                 </div>
                                 <img class="d-block w-100" src="{{ car.car_photo.url }}" alt="car" style="min-height: 262px;max-height:262px">
                             </a>
@@ -169,7 +169,7 @@
                             </div>
                             <ul class="facilities-list clearfix">
                                 <li>{{ car.fuel_type }}</li>
-                                <li>{{ car.miles | intcomma }}</li>
+                                <li>{{ car.miles }}</li>
                                 <li>{{ car.transmission }}</li>
                                 <li>{{ car.body_style }}</li>
                                 <li>{{ car.color }}</li>
@@ -213,7 +213,7 @@
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
-                                        <span><i class="flaticon-way"></i></span>{{ car.miles | intcomma }} km
+                                        <span><i class="flaticon-way"></i></span>{{ car.miles }} km
                                     </li>
                                     <li>
                                     </li>
@@ -273,7 +273,7 @@
                             <p class="cartype">{{ car.body_style }}</p>
                         </div>
                         <div class="pull-right">
-                            <p class="price">{{ car.price | intcomma }}</p>
+                            <p class="price">{{ car.price }}</p>
                         </div>
                     </div>
                 </div>
